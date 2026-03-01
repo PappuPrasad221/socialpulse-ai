@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, Suspense } from 'react';
 import TweetCard from '@/components/TweetCard';
 import LoadingSpinner from '@/components/LoadingSpinner';
 import { Tweet, TweetAnalysis } from '@/lib/types';
@@ -58,11 +57,8 @@ const MODES: ModeConfig[] = [
 ];
 
 function SearchPageContent() {
-  const searchParams = useSearchParams();
-  const initialQuery = searchParams.get('q') || '';
-
   const [mode, setMode] = useState<SearchMode>('students');
-  const [query, setQuery] = useState(initialQuery);
+  const [query, setQuery] = useState('');
   const [tweets, setTweets] = useState<Tweet[]>([]);
   const [analyses, setAnalyses] = useState<Record<string, TweetAnalysis>>({});
   const [loading, setLoading] = useState(false);
@@ -153,10 +149,6 @@ function SearchPageContent() {
   };
 
 
-  useEffect(() => {
-    if (initialQuery) handleSearch(initialQuery);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
