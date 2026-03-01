@@ -100,7 +100,7 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/search?q=India"
+                  href="/search"
                   className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors"
                 >
                   <Search className="w-5 h-5 mr-2" />
