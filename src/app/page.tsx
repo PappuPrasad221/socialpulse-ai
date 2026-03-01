@@ -2,17 +2,18 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
-  Search, 
-  Shield, 
-  TrendingUp, 
-  BarChart3, 
-  Download, 
+import {
+  Search,
+  Shield,
+  TrendingUp,
+  BarChart3,
+  Download,
   FileSearch,
   Globe,
   Scale,
   Bot,
-  Languages
+  Languages,
+  Newspaper
 } from 'lucide-react';
 
 const features = [
@@ -64,6 +65,12 @@ const features = [
     description: 'Export datasets in JSON/CSV for further research',
     href: '/export',
   },
+  {
+    icon: Newspaper,
+    title: 'News Feed',
+    description: 'Browse real news articles from 75,000+ sources to cross-reference with tweet data',
+    href: '/news',
+  },
 ];
 
 export default function HomePage() {
@@ -81,13 +88,13 @@ export default function HomePage() {
                 <Shield className="w-4 h-4" />
                 Research-Grade Platform
               </div>
-              
+
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
                 SocialPulse AI
               </h1>
-              
+
               <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-                Professional platform for AI-powered tweet analysis, credibility scoring, 
+                Professional platform for AI-powered tweet analysis, credibility scoring,
                 and political discourse research. Real data. Real insights.
               </p>
 
@@ -157,8 +164,8 @@ export default function HomePage() {
                   Trusted by Researchers
                 </h2>
                 <p className="text-blue-100 mb-6">
-                  SocialPulse AI is designed for academic research, journalism, 
-                  and policy analysis. All data is sourced from public Twitter/X APIs 
+                  SocialPulse AI is designed for academic research, journalism,
+                  and policy analysis. All data is sourced from public Twitter/X APIs
                   with full attribution.
                 </p>
                 <ul className="space-y-3">

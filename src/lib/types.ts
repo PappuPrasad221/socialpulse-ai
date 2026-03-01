@@ -100,3 +100,45 @@ export interface ResearchItem {
   noteMode: 'ai' | 'manual';
   savedAt: Date;
 }
+
+export interface NewsArticle {
+  id: string;
+  title: string;
+  description: string | null;
+  content: string | null;
+  url: string;
+  urlToImage: string | null;
+  publishedAt: string;
+  source: { id: string | null; name: string };
+  author: string | null;
+}
+
+export interface NewsSearchParams {
+  query: string;
+  max_results?: number;
+  language?: string;
+  from?: string;
+  to?: string;
+  sortBy?: 'relevancy' | 'popularity' | 'publishedAt';
+}
+
+export interface NewsArticle {
+  id: string;
+  title: string;
+  description: string | null;
+  content: string | null;
+  url: string;
+  urlToImage: string | null;
+  publishedAt: string;
+  source: { id: string | null; name: string };
+  author: string | null;
+}
+
+export interface NewsSearchParams {
+  query: string;
+  max_results?: number;
+  language?: string;
+  from?: string;
+  to?: string;
+  sortBy?: 'relevancy' | 'popularity' | 'publishedAt';
+}

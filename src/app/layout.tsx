@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
-import { Shield, Menu, X } from 'lucide-react';
+import { Shield, Menu, X, Newspaper } from 'lucide-react';
 import { useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -39,9 +39,6 @@ export default function RootLayout({
                   <Link href="/analysis" className="text-gray-600 hover:text-gray-900 font-medium">
                     Analysis
                   </Link>
-                  <Link href="/timeline" className="text-gray-600 hover:text-gray-900 font-medium">
-                    Timeline
-                  </Link>
                   <Link href="/influence" className="text-gray-600 hover:text-gray-900 font-medium">
                     Influence
                   </Link>
@@ -51,8 +48,8 @@ export default function RootLayout({
                   <Link href="/research" className="text-gray-600 hover:text-gray-900 font-medium">
                     Research
                   </Link>
-                  <Link href="/export" className="text-gray-600 hover:text-gray-900 font-medium">
-                    Export
+                  <Link href="/news" className="text-gray-600 hover:text-gray-900 font-medium">
+                    News Feed
                   </Link>
                 </nav>
               </div>
